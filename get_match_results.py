@@ -259,6 +259,6 @@ if len(matches_to_post) > 0:
             cur.execute("INSERT INTO match_results VALUES (" + str(unique_id) +
                         " , %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)", match_stats[6:])
 
-        print("Files were committed to the database")
+        print("\nFiles were committed to the database")
         conn.commit()
 

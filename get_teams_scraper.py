@@ -1,6 +1,5 @@
 import re
 import time
-import pandas as pd
 import psycopg2
 from unidecode import unidecode
 from bs4 import BeautifulSoup
