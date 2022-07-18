@@ -1,0 +1,119 @@
+CREATE TABLE leagues (
+    id INTEGER NOT NULL,
+    name TEXT NOT NULL,
+    region TEXT,
+    league_image TEXT,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE upcoming (
+    id INTEGER NOT NULL,
+    match_week INTEGER NOT NULL,
+    league_id INTEGER REFERENCES leagues (id) NOT NULL,
+    match_day TEXT NOT NULL,
+    game_date DATE NOT NULL,
+    match_time TEXT NOT NULL,
+    blue_team TEXT NOT NULL,
+    red_team TEXT NOT NULL
+);
+
+CREATE TABLE teams (
+    id INTEGER NOT NULL,
+    name TEXT NOT NULL,
+    abbreviation TEXT,
+    league_id INTEGER NOT NULL REFERENCES leagues (id),
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE splits (
+    id INTEGER NOT NULL,
+    league_id INTEGER REFERENCES leagues (id) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE games (
+    id INTEGER NOT NULL,
+    league_id INTEGER REFERENCES leagues (id),
+    split_id INTEGER REFERENCES splits (id),
+    game_date DATE NOT NULL,
+    game_count INTEGER NOT NULL,
+    blue_team TEXT NOT NULL,
+    red_team TEXT NOT NULL,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE match_results (
+    game_id INTEGER REFERENCES games (id) NOT NULL,
+    first_blood TEXT,
+    first_tower TEXT,
+    first_dragon TEXT,
+    first_inhibitor TEXT,
+    first_baron TEXT,
+    first_rift_herald TEXT,
+    blue_team_kills INTEGER,
+    red_team_kills INTEGER,
+    winner TEXT NOT NULL,
+    loser TEXT NOT NULL
+);
+
+CREATE TABLE match_odds (
+    team_one TEXT,
+    team_two TEXT,
+    team_one_win FLOAT,
+    team_two_win FLOAT,
+    team_one_first_blood FLOAT,
+    team_two_first_blood FLOAT,
+    team_one_ft5_kills FLOAT,
+    team_two_ft5_kills FLOAT,
+    team_one_ft10_kills FLOAT,
+    team_two_ft10_kills FLOAT,
+    odd_kills FLOAT,
+    even_kills FLOAT
+);
+
+CREATE TABLE bet_history (
+    id INTEGER NOT NULL,
+    league_id INTEGER REFERENCES leagues (id),
+    game_id INTEGER REFERENCES upcoming (id) NOT NULL,
+    blue_team TEXT NOT NULL,
+    red_team TEXT NOT NULL,
+	bet_on_team TEXT NOT NULL,
+	objective TEXT NOT NULL,
+	odds: FLOAT NOT NULL,
+	date: DATE NOT NULL,
+    map: FLOAT NOT NULL,
+	bet_amount: FLOAT NOT NULL,
+);
+
+-- Up to date links as of 18/07/2022
+INSERT INTO leagues VALUES (1, 'LCK', 'Korea', 'https://upload.wikimedia.org/wikipedia/en/thumb/1/13/League_of_Legends_Champions_Korea_logo.svg/1200px-League_of_Legends_Champions_Korea_logo.svg.png');
+INSERT INTO leagues VALUES (2, 'LEC', 'Europe', 'https://toppng.com/uploads/preview/lec-logo-league-of-legends-lec-logo-11563335137pu09vlug7t.png');
+INSERT INTO leagues VALUES (3, 'LVP_SuperLiga', 'Spanish', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/33/LVP_SLO_Logo.png/revision/latest/scale-to-width-down/220?cb=20170802034952');
+INSERT INTO leagues VALUES (4, 'LCO', 'Oceania', 'https://upload.wikimedia.org/wikipedia/en/0/0f/Oceanic_Pro_League_logo.png');
+INSERT INTO leagues VALUES (5, 'LFL', 'French', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/63/LFL_Logo.png/revision/latest?cb=20190403113259');
+INSERT INTO leagues VALUES (6, 'PCS', 'South East Asia', 'https://tips.gg/wp-content/themes/assets/image/tournaments/lol-pcs.png');
+INSERT INTO leagues VALUES (7, 'LCS', 'North America', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/c8/LCS_2020_Logo.png/revision/latest/scale-to-width-down/1200?cb=20200127120628');
+INSERT INTO leagues VALUES (8, 'NA_Academy_League', 'North America', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/c/c8/LCS_2020_Logo.png/revision/latest/scale-to-width-down/1200?cb=20200127120628');
+INSERT INTO leagues VALUES (9, 'LLA', 'Latin America', 'https://liquipedia.net/commons/images/thumb/8/8c/LLA_logo.png/600px-LLA_logo.png');
+INSERT INTO leagues VALUES (10, 'Ultraliga', 'Polish', 'https://esportspedia-lol.s3.amazonaws.com/thumb/9/9a/UltraligaLogo.png/300px-UltraligaLogo.png');
+INSERT INTO leagues VALUES (11, 'LPL', 'China', 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/League_of_legends_pro_league_logo.svg/1200px-League_of_legends_pro_league_logo.svg.png');
+INSERT INTO leagues VALUES (12, 'LJL', 'Japan', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/16/LJL_2020_logo.png/revision/latest?cb=20200727155121');
+INSERT INTO leagues VALUES (13, 'TCL', 'Turkish', 'https://esportspedia-lol.s3.amazonaws.com/thumb/e/e0/TCL_2019_logo.png/300px-TCL_2019_logo.png');
+INSERT INTO leagues VALUES (14, 'VCS', 'Vietnam', 'https://upload.wikimedia.org/wikipedia/en/a/ae/Vietnam_Championship_Series_logo.png');
+INSERT INTO leagues VALUES (15, 'CBLOL', 'Brazil', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/4e/CBLOL_2020_Logo.png/revision/latest/scale-to-width-down/2000?cb=20201125212403');
+
+INSERT INTO splits VALUES (1, 1);
+INSERT INTO splits VALUES (2, 2);
+INSERT INTO splits VALUES (3, 3);
+INSERT INTO splits VALUES (4, 4);
+INSERT INTO splits VALUES (5, 5);
+INSERT INTO splits VALUES (6, 6);
+INSERT INTO splits VALUES (7, 7);
+INSERT INTO splits VALUES (8, 8);
+INSERT INTO splits VALUES (9, 9);
+INSERT INTO splits VALUES (10, 10);
+INSERT INTO splits VALUES (11, 11);
+INSERT INTO splits VALUES (12, 12);
+INSERT INTO splits VALUES (13, 13);
+INSERT INTO splits VALUES (14, 14);
+INSERT INTO splits VALUES (15, 15);
