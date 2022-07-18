@@ -7,9 +7,6 @@ npm-debug.log
 *.dev
 .DS_Store
 
-# Docker
-Dockerfile
-docker-compose.yml
-
-# Stats
-*.csv
+# Match Schedule
+Upcoming Matches
+selenium/
