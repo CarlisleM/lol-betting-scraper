@@ -32,6 +32,14 @@ input_files = {
     'LFL Upcoming Games.csv',
     'LJL Upcoming Games.csv',
     'VCS Upcoming Games.csv',
+    'Hitpoint Masters Upcoming Games.csv',
+    'LPLOL Upcoming Games.csv',
+    'NLC Upcoming Games.csv',
+    'Prime League 1st Division Upcoming Games.csv',
+    'Elite Series Upcoming Games.csv',
+    'Esports Balkan League Upcoming Games.csv',
+    'Turkey Academy League Upcoming Games.csv',
+    'LCK CL Upcoming Games.csv',
 }
 
 cur.execute("DELETE FROM upcoming;")

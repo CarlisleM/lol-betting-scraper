@@ -49,6 +49,14 @@ list_of_leagues_to_scrape = [
     'https://lol.fandom.com/wiki/TCL/2022_Season/Summer_Season', # TCL 13
     'https://lol.fandom.com/wiki/VCS/2022_Season/Summer_Season', # VCS 14 
     'https://lol.fandom.com/wiki/CBLOL/2022_Season/Split_2', # CBLOL 15
+    'https://lol.fandom.com/wiki/LCK_CL/2022_Season/Summer_Season', # LCK CL 16 
+    'https://lol.fandom.com/wiki/LPLOL/2022_Season/Summer_Season', # LPLOL 17 
+    'https://lol.fandom.com/wiki/NLC/2022_Season/Summer_Season', # NLC 18
+    'https://lol.fandom.com/wiki/Esports_Balkan_League/2022_Season/Summer_Split', # Esports Balkan League 19
+    'https://lol.fandom.com/wiki/Hitpoint_Masters/2022_Season/Summer_Season', # Hitpoint Masters 20 
+    'https://lol.fandom.com/wiki/Prime_League_1st_Division/2022_Season/Summer_Season', # Prime League 21 
+    'https://lol.fandom.com/wiki/Turkey_Academy_League/2022_Season/Summer_Season', # Turkey Academy League 22 
+    'https://lol.fandom.com/wiki/Elite_Series/2022_Season/Summer_Split', # Elite Series 23 
 ]
 
 id = 1
@@ -99,17 +107,18 @@ for league_url in list_of_leagues_to_scrape:
             final_match = games[len(games)-1]
             final_match = (final_match.text).split()
 
+            # Can remove this if it is not working for some leagues (LCK CL, TCL Academy)
             final_match_t1 = final_match[0]
             final_match_t2 = final_match[4]
 
-            for idx, character in enumerate(final_match_t1):
+            for idx, character in enumerate(final_match):
                 for team in teams:
-                    if team[1] in final_match_t1[-idx:]:
+                    if team[1] in final_match[-idx:]:
                         most_recent_game_t1 = team[1]
 
-            for idx, character in enumerate(final_match_t2):
+            for idx, character in enumerate(final_match):
                 for team in teams:
-                    if team[1] in final_match_t2[-idx:]:
+                    if team[1] in final_match[-idx:]:
                         most_recent_game_t2 = team[1]
             
         number_of_games_played = len(games)

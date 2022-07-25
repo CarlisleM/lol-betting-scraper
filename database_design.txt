@@ -101,6 +101,14 @@ INSERT INTO leagues VALUES (12, 'LJL', 'Japan', 'https://static.wikia.nocookie.n
 INSERT INTO leagues VALUES (13, 'TCL', 'Turkish', 'https://esportspedia-lol.s3.amazonaws.com/thumb/e/e0/TCL_2019_logo.png/300px-TCL_2019_logo.png');
 INSERT INTO leagues VALUES (14, 'VCS', 'Vietnam', 'https://upload.wikimedia.org/wikipedia/en/a/ae/Vietnam_Championship_Series_logo.png');
 INSERT INTO leagues VALUES (15, 'CBLOL', 'Brazil', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/4e/CBLOL_2020_Logo.png/revision/latest/scale-to-width-down/2000?cb=20201125212403');
+INSERT INTO leagues VALUES (16, 'LCK_CL', 'Korea', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/39/LCK_CL_logo.png/revision/latest/scale-to-width-down/220?cb=20210308224549');
+INSERT INTO leagues VALUES (17, 'LPLOL', 'Portugal', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/ff/LPLOL21_logo.png/revision/latest/scale-to-width-down/220?cb=20210912070718');
+INSERT INTO leagues VALUES (18, 'NLC', 'Northern Europe', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/a9/NLC_2022_Logo.png/revision/latest/scale-to-width-down/220?cb=20220203213452');
+INSERT INTO leagues VALUES (19, 'Esports_Balkan_League', 'Balkan', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/3a/EBL_2021.png/revision/latest/scale-to-width-down/220?cb=20201215005148');
+INSERT INTO leagues VALUES (20, 'Hitpoint_Masters', 'Czech and Slovak', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/0/03/Hitpoint_Masters_2021.png/revision/latest/scale-to-width-down/220?cb=20210215182541');
+INSERT INTO leagues VALUES (21, 'Prime_League_1st_Division', 'Germany', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/4d/Strauss_Prime_Leaguelogo_square.png/revision/latest/scale-to-width-down/220?cb=20211205164412');
+INSERT INTO leagues VALUES (22, 'Turkey_Academy_League', 'Turkish', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/17/TR_Academy_logo.png/revision/latest/scale-to-width-down/220?cb=20200204163203');
+INSERT INTO leagues VALUES (23, 'Elite_Series', 'Benelux', 'https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/4/43/Elite_Series_logo.png/revision/latest/scale-to-width-down/220?cb=20211222135759');
 
 INSERT INTO splits VALUES (1, 1);
 INSERT INTO splits VALUES (2, 2);
@@ -117,3 +125,11 @@ INSERT INTO splits VALUES (12, 12);
 INSERT INTO splits VALUES (13, 13);
 INSERT INTO splits VALUES (14, 14);
 INSERT INTO splits VALUES (15, 15);
+INSERT INTO splits VALUES (16, 16);
+INSERT INTO splits VALUES (17, 17);
+INSERT INTO splits VALUES (18, 18);
+INSERT INTO splits VALUES (19, 19);
+INSERT INTO splits VALUES (20, 20);
+INSERT INTO splits VALUES (21, 21);
+INSERT INTO splits VALUES (22, 22);
+INSERT INTO splits VALUES (23, 23);

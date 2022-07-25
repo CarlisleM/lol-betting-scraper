@@ -28,7 +28,15 @@ get_league = {
     'LJL': '12',
     'TCL': '13',
     'VCS': '14',
-    'CBLOL': '15'
+    'CBLOL': '15',
+    'LCK CL': '16',
+    'LPLOL': '17',
+    'NLC': '18',
+    'Esports Balkan League': '19',
+    'Hitpoint Masters': '20',
+    'Prime League 1st Division': '21',
+    'Turkey Academy League': '22',
+    'Elite Series': '23',
 }
 
 get_split = {
@@ -46,7 +54,15 @@ get_split = {
     'LJL': '12',
     'TCL': '13',
     'VCS': '14',
-    'CBLOL': '15'
+    'CBLOL': '15',
+    'LCK CL': '16',
+    'LPLOL': '17',
+    'NLC': '18',
+    'Esports Balkan League': '19',
+    'Hitpoint Masters': '20',
+    'Prime League 1st Division': '21',
+    'Turkey Academy League': '22',
+    'Elite Series': '23',
 }
 
 def get_league_id(league):

@@ -42,6 +42,14 @@ list_of_leagues_to_scrape = [
     'TCL/2022 Season/Summer Season', # TCL 13 
     'VCS/2022 Season/Summer Season', # VCS 14
     'CBLOL/2022 Season/Split 2', # CBLOL 15 
+    'LCK CL/2022 Season/Summer Season', # LCK CL 16
+    'LPLOL/2022 Season/Summer Season', # LPLOL 17 
+    'NLC/2022 Season/Summer Season', # NLC 18
+    'Esports Balkan League/2022 Season/Summer Split', # Esports Balkan League 19
+    'Hitpoint Masters/2022 Season/Summer Season', # Hitpoint Masters 20 
+    'Prime League 1st Division/2022 Season/Summer Season', # Prime League 21 
+    'Turkey Academy League/2022 Season/Summer Season', # Turkey Academy League 22 
+    'Elite Series/2022 Season/Summer Split', # Elite Series 23 
 ]
 
 response = requests.get("https://lol-betting.herokuapp.com/api/games")

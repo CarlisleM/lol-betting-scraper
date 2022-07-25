@@ -18,9 +18,9 @@ list_of_leagues_to_scrape = [
     'LVP SuperLiga/2022 Season/Summer Season', # LVP 3 
     'LCO/2022 Season/Split 2', # LCO (Oceania) 4 
     'LFL/2022 Season/Summer Season', # LFL 5 
-    'PCS/2022 Season/Summer Season', # PCS 6 
+    'PCS/2022 Season/Summer Season', # PCS 6  
     'LCS/2022 Season/Summer Season', # LCS 7 
-    'NA Academy League/2022 Season/Summer Season',
+    'NA Academy League/2022 Season/Summer Season', # NA Academy 8
     'LLA/2022 Season/Closing Season', # LLA 9 
     'Ultraliga/Season 8', # Ultraliga 10 
     'LPL/2022 Season/Summer Season', # LPL 11
@@ -28,13 +28,21 @@ list_of_leagues_to_scrape = [
     'TCL/2022 Season/Summer Season', # TCL 13 
     'VCS/2022 Season/Summer Season', # VCS 14
     'CBLOL/2022 Season/Split 2', # CBLOL 15 
+    'LCK CL/2022 Season/Summer Season', # LCK CL 16
+    'LPLOL/2022 Season/Summer Season', # LPLOL 17 
+    'NLC/2022 Season/Summer Season', # NLC 18
+    'Esports Balkan League/2022 Season/Summer Split', # Esports Balkan League 19
+    'Hitpoint Masters/2022 Season/Summer Season', # Hitpoint Masters 20 
+    'Prime League 1st Division/2022 Season/Summer Season', # Prime League 21 
+    'Turkey Academy League/2022 Season/Summer Season', # Turkey Academy League 22 
+    'Elite Series/2022 Season/Summer Split', # Elite Series 23 
 ]
 
 team_data = []
 
 site = mwclient.Site('lol.fandom.com', path='/')
 
-unique_team_id = 149 # was 0
+unique_team_id = 0 
 
 for league_url in list_of_leagues_to_scrape:
     print("Scraping " + league_url)
